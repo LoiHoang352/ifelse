@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <h1>Môn toán</h1>
+        <input type="number" id="math">
+        <h2>Môn văn</h2>
+        <input type="number" id="lite">
+        <h2>Môn Anh</h2>
+        <input type="number" id="english"> <br>
+        <h1 >Khu vực</h1> 
+        <select name="" id="place">
+           <option value="kv1">KV1</option>
+           <option value="kv2">KV2</option>
+           <option value="kv2_2">KV2-NT</option>
+           <option value="kv3">KV3</option>
+        </select>
+        <button type="button" onclick="calculator()">Tính điểm</button>
+    </form>
+</body>
+<script>
+    function calculator(){
+        let math = +document.getElementById('math').value;
+        let lite = +document.getElementById('lite').value;
+        let english = +document.getElementById('english').value;
+        let place = document.getElementById('place').value;
+        let addPoint = '0';
+        switch (place){
+            case 'kv1':
+                addPoint = 0.75;
+                break
+            case 'kv2':
+                addPoint = 0.5;
+                break
+            case 'kv2_2':
+                addPoint = 0.25;
+                break
+            default:
+            addPoint = 0;
+        }
+        alert('Tổng điểm Đh khối D của bạn là: ' + (math + lite + english + addPoint))
+    }
+</script>
+</html>

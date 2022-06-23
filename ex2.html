@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" id="number" placeholder="nhập số"> 
+    <button type="button" onclick="Btn()">kiểm tra</button>
+</body>
+    <script>
+        function Btn(){
+            let getNumber = +document.getElementById('number').value;
+            if( getNumber >10 && getNumber % 2 == 0){
+            alert(getNumber)
+        }else{
+            alert('nhập lại')
+        }
+        }
+        
+    </script>
+</html>

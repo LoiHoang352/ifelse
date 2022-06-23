@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <input type="text" id="fruit" placeholder="nhập tên sản phẩm cần tìm: ">
+        <button type="button" onclick="search()"> Tìm kiếm</button>
+    </form>
+</body>
+<script>
+    function search(){
+        let getPrice = document.getElementById('fruit').value;
+        let priceFuit = '0';
+        switch(getPrice){
+            case 'Ổi':
+                priceFuit = '20000 VNĐ/kg';
+                break
+            case 'Dưa Hấu':
+                priceFuit = '20000 VNĐ/kg';
+                break
+            case 'Táo':
+                priceFuit = '30000 VNĐ/kg';
+                break
+            case 'Xoài':
+                priceFuit = '30000 VNĐ/kg';
+                break
+            case 'Cam':
+                priceFuit = '40000 VNĐ/kg';
+                break
+            case 'Chôm Chôm':
+                priceFuit = '40000 VNĐ/kg';
+                break
+            case 'Măng Cụt':
+                priceFuit = '50000 VNĐ/kg';
+                break
+        }
+        alert('giá của ' + getPrice + ' là: ' + priceFuit)
+    }
+    
+</script>
+</html>
